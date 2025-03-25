@@ -1,0 +1,27 @@
+{
+    "region_name": "cn-north-4",
+    "enterprise_project_id": "0",
+    "vpc_name": "VPC_Test",
+    "vpc_cidr": "192.168.0.0/16",
+    "subnets_configuration": [
+        {
+            "name": "VPC-Subnet-Test",
+            "cidr": "192.168.0.0/24"
+        }
+    ],
+    "security_group_name": "Security_Group_Test",
+    "instance_flavor_cpu_core_count": 4,
+    "instance_flavor_memory_size": 8,
+    "instance_image_os_type": "CentOS",
+    "instance_image_architecture": "x86",
+    "instance_name": "ECS-Test",
+    "instance_disks_configuration": [
+        {
+            "is_system_disk": true,
+            "type": "SSD",
+            "size": 200
+        }
+    ],
+    "zone_name": "private-zone.test.com",
+    "record_set_name": "recordset.private-zone.test.com"
+}
