@@ -1,73 +1,50 @@
-# Huawei Cloud DNS Terraform Module
+# The Terraform module of HUAWEI Cloud DNS service
 
-Terraform moudle which create DNS resource on Huawei Cloud.
+What capabilities does the current module provide:
 
-These types of resources are supported:
++ Flexible DNS resource combination (through multiple DNS sub-modules)
++ Abundant example references, one-click deployment of DNS resources.
 
-* [DNS zone](https://www.terraform.io/docs/providers/huaweicloud/r/dns_zone_v2.html)
-* [DNS recordset](https://www.terraform.io/docs/providers/huaweicloud/r/dns_recordset_v2.html)
+## Notes
 
-## Usage
+If you want to manage DNS resources using Terraform module (via this repository), you need to make the following
+declaration in the `source` of the script.
 
 ```hcl
-module "example" {
-  source = "terraform-huaweicloud-modules/dns/huaweicloud"
+# Use the latest version.
+module "dns_zone" {
+  source = "github.com/terraform-huaweicloud-modules/terraform-huaweicloud-dns/modules/dns-zone"
 
-  // DNS zone
-  zone_name = "example.com."
-  zone_type = "public"
-  email     = "admin@example.com"
-
-  // DNS recordsets
-  recordsets = [
-  {
-    name        = "rs1.example.com."
-    description = "A zone record"
-    ttl         = 600
-    type        = "A"
-    records     = ["10.0.0.1"]
-  },
-  {
-    name        = "rs2.example.com."
-    description = "A zone record"
-    ttl         = 600
-    type        = "A"
-    records = ["10.0.0.2"]
-  },
-  ]
+  ...
 }
 ```
 
-## Conditional creation
+## Contributing
 
-This module can create both DNS zone and recordsets, it is possible to use existing DNS zone only if you
-specify `zone_id` parameter.
+Report issues/questions/feature requests in the [issues](https://github.com/terraform-huaweicloud-modules/terraform-huaweicloud-dns/issues/new)
+section.
+
+Full contributing [guidelines are covered here](.github/how_to_contribute.md).
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| Terraform | >= 1.3.0 |
+| Huaweicloud Provider | >= 1.73.0 |
+
+## Modules
+
+No module.
+
+## Resources
+
+No resource.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| zone_id | Specifying existing DNS zone ID | string | `""` | no  |
-| zone_name | The name of the DNS zone. Note the `.` at the end of the name. | string  | `""`  | yes  |
-| zone_type | The type of the DNS zone. Can either be `public` or `private`. | string  | `"public"`  | no  |
-| router_id | The router UUID, required if `zone_type` is private. | string  | `""`  | no  |
-| router_region | The region of the router, required if `zone_type` is private. | string  | `""`  | no  |
-| email | The email contact for the zone record. | string  | `""`  | no  |
-| description | A description of the DNS zone. | string  | `""`  | no  |
-| recordsets  | List of record sets in the DNS zone. | list(object)  | `[]`  | yes  |
-
+No input.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| this_dns_zone_id | The ID of the DNS zone |
-| this_dns_recordset_ids | The IDs of the recordsets |
-
-Authors
-----
-Created and maintained by [ShiChangkuo](https://github.com/ShiChangkuo)
-
-License
-----
-Apache 2 Licensed. See LICENSE for full details.
+No output.
