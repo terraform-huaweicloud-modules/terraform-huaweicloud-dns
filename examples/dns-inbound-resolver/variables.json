@@ -1,0 +1,18 @@
+{
+    "region_name": "cn-north-4",
+    "enterprise_project_id": "0",
+    "vpc_name": "VPC-Test-Inbound",
+    "vpc_cidr": "172.16.0.0/16",
+    "subnets_configuration": [
+        {
+            "name": "Subnet-Inbound",
+            "cidr": "172.16.0.0/24"
+        }
+    ],
+    "endpoint_name": "Endpoint-Test",
+    "endpoint_type": "inbound",
+    "endpoint_ip_addresses": [
+        "172.16.0.10",
+        "172.16.0.11"
+    ]
+}
