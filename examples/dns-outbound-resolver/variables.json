@@ -1,0 +1,60 @@
+{
+    "region_name": "cn-north-4",
+    "enterprise_project_id": "0",
+    "vpc_network_configurations": [
+        {
+            "vpc_name": "VPC-Test-Zone",
+            "vpc_cidr": "172.16.0.0/16",
+            "subnets_configuration": [
+                {
+                    "name": "Subnet-Test",
+                    "cidr": "172.16.0.0/24"
+                }
+            ]
+        },
+        {
+            "vpc_name": "VPC-Test-1",
+            "vpc_cidr": "172.16.0.0/16",
+            "subnets_configuration": [
+                {
+                    "name": "Subnet-1-1",
+                    "cidr": "172.16.0.0/24"
+                }
+            ]
+        },
+        {
+            "vpc_name": "VPC-Test-2",
+            "vpc_cidr": "192.168.0.0/24",
+            "subnets_configuration": [
+                {
+                    "name": "Subnet-2-1",
+                    "cidr": "192.168.0.0/24"
+                }
+            ]
+        }
+    ],
+    "zone_name": "resolver.zone.name.com.",
+    "zone_type": "private",
+    "endpoint_name": "Endpoint-Test",
+    "endpoint_type": "outbound",
+    "endpoint_ip_addresses": [
+        "172.16.0.10",
+        "172.16.0.11"
+    ],
+    "resolver_rules_configuration": [
+        {
+            "name": "Rule-Test",
+            "ip_addresses": [
+                "192.168.2.100",
+                "192.168.2.101"
+            ]
+        },
+        {
+            "name": "Rule-Test2",
+            "ip_addresses": [
+                "172.168.2.100",
+                "172.168.2.101"
+            ]
+        }
+    ]
+}
