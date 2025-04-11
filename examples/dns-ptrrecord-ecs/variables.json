@@ -1,0 +1,37 @@
+{
+    "region_name": "cn-north-4",
+    "enterprise_project_id": "0",
+    "vpc_name": "vpc_test_for_ecs",
+    "vpc_cidr": "192.168.0.0/16",
+    "subnets_configuration": [
+        {
+            "name": "vpc_subnet_test_for_ecs",
+            "cidr": "192.168.0.0/24"
+        }
+    ],
+    "security_group_name": "security_group_for_ecs",
+    "instance_flavor_cpu_core_count": 4,
+    "instance_flavor_memory_size": 8,
+    "instance_image_os_type": "CentOS",
+    "instance_image_architecture": "x86",
+    "instance_name": "ecs_for_ptrrecord",
+    "eip_publicip_configuration": [
+        {
+            "type": "5_bgp"
+        }
+    ],
+    "eip_bandwidth_configuration": [
+        {
+            "share_type": "PER",
+            "name": "bandwidth_test",
+            "size": 5
+        }
+    ],
+    "eip_name": "eip_ipv4_test",
+    "ptrrecord_name": "ptr.record.test.com.",
+    "ptrrecord_ttl": 600,
+    "ptrrecord_description": "PTR record module test",
+    "ptrrecord_tags": {
+        "foo": "bar"
+    }
+}
