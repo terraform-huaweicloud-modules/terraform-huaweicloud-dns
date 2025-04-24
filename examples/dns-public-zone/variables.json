@@ -1,0 +1,14 @@
+{
+    "region_name": "cn-north-4",
+    "enterprise_project_id": "0",
+    "zone_name": "public.zone.module.test.",
+    "custom_line_name": "zone_modele_test",
+    "custom_line_ip_segments": [
+        "1.0.0.1-1.0.0.2"
+    ],
+    "custom_line_description": "Created by terraform module",
+    "record_set_name": "www.public.zone.module.test",
+    "record_set_records": [
+        "2.2.2.2"
+    ]
+}
